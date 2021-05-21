@@ -1,12 +1,12 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :destroy]
+  before_action :set_list, only: [:show, :destroy] #
 
   def index
     @lists = List.all
   end
 
   def show
-    @bookmark = Bookmark.new
+    @bookmark = Bookmark.new # this doesn't have to be here because of the before action, now the show runs twice of so
   end
 
   def new
